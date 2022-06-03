@@ -1,5 +1,5 @@
-ComputerGander\ComputerGander\bin
-ComputerGander\ComputerGander\obj
-ComputerGander\ComputerGander\ComputerGander.csproj.user
-ComputerGander\ComputerGander\Form1.resx
-testignore
+ComputerGander/ComputerGander/bin
+ComputerGander/ComputerGander/obj
+ComputerGander/.vs
+ComputerGander/ComputerGander/ComputerGander.csproj.user
+ComputerGander/ComputerGander/Form1.resx
