@@ -1,3 +1,9 @@
+using System;
+using System.Net.NetworkInformation;
+using System.Net;
+using System.Text;
+using System.Windows.Forms;
+
 namespace ComputerGander
 {
     internal static class Program

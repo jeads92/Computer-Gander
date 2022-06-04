@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ipAddressLabel = new System.Windows.Forms.Label();
             this.ipButton = new System.Windows.Forms.Button();
             this.macButton = new System.Windows.Forms.Button();
@@ -37,6 +38,9 @@
             this.pingDataLabel = new System.Windows.Forms.Label();
             this.generatePingData = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.packetsListBox = new System.Windows.Forms.ListBox();
+            this.PacketsLabel = new System.Windows.Forms.Label();
+            this.primaryTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // ipAddressLabel
@@ -120,12 +124,38 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Example: 12.345.678.90";
             // 
+            // packetsListBox
+            // 
+            this.packetsListBox.FormattingEnabled = true;
+            this.packetsListBox.ItemHeight = 15;
+            this.packetsListBox.Location = new System.Drawing.Point(455, 27);
+            this.packetsListBox.Name = "packetsListBox";
+            this.packetsListBox.Size = new System.Drawing.Size(333, 319);
+            this.packetsListBox.TabIndex = 11;
+            // 
+            // PacketsLabel
+            // 
+            this.PacketsLabel.AutoSize = true;
+            this.PacketsLabel.Location = new System.Drawing.Point(615, 9);
+            this.PacketsLabel.Name = "PacketsLabel";
+            this.PacketsLabel.Size = new System.Drawing.Size(47, 15);
+            this.PacketsLabel.TabIndex = 12;
+            this.PacketsLabel.Text = "Packets";
+            // 
+            // primaryTimer
+            // 
+            this.primaryTimer.Enabled = true;
+            this.primaryTimer.Interval = 2500;
+            this.primaryTimer.Tick += new System.EventHandler(this.primaryTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(791, 450);
+            this.Controls.Add(this.PacketsLabel);
+            this.Controls.Add(this.packetsListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.generatePingData);
             this.Controls.Add(this.pingDataLabel);
@@ -154,5 +184,8 @@
         private Label pingDataLabel;
         private Button generatePingData;
         private Label label1;
+        private ListBox packetsListBox;
+        private Label PacketsLabel;
+        private System.Windows.Forms.Timer primaryTimer;
     }
 }
