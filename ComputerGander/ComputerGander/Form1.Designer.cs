@@ -136,11 +136,11 @@
             // PacketsLabel
             // 
             this.PacketsLabel.AutoSize = true;
-            this.PacketsLabel.Location = new System.Drawing.Point(345, 9);
+            this.PacketsLabel.Location = new System.Drawing.Point(312, 9);
             this.PacketsLabel.Name = "PacketsLabel";
-            this.PacketsLabel.Size = new System.Drawing.Size(97, 15);
+            this.PacketsLabel.Size = new System.Drawing.Size(160, 15);
             this.PacketsLabel.TabIndex = 12;
-            this.PacketsLabel.Text = "Received Packets";
+            this.PacketsLabel.Text = "Received Packets / 2 seconds";
             // 
             // primaryTimer
             // 

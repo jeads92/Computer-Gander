@@ -113,7 +113,6 @@ namespace ComputerGander
         private void primaryTimer_Tick(object sender, EventArgs e)
         {
             // Initialize packet variables
-            NetworkInterfaceComponent version = NetworkInterfaceComponent.IPv6;
             IPGlobalProperties properties = IPGlobalProperties.GetIPGlobalProperties();
             IPGlobalStatistics ipstats = properties.GetIPv6GlobalStatistics();
 
