@@ -50,7 +50,7 @@ namespace ComputerGander
             if(ipButton.Text == "Show IP Address")
             {
                 string hostName = Dns.GetHostName();
-                string localIP = Dns.GetHostByName(hostName).AddressList[0].ToString();
+                string localIP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
                 ipAddressLabel.Text = $"IP: {localIP}";
                 ipButton.Text = "Hide IP Address";
             }
