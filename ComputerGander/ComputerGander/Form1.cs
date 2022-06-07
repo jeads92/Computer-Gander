@@ -16,7 +16,6 @@ namespace ComputerGander
         private void GenerateMAC(object sender, EventArgs e)
         {
             // Find and display the MAC Address of the host machine.
-
             if (macButton.Text == "Show MAC Address")
             {
                 // Get MAC address from Network Interfaces
@@ -28,13 +27,11 @@ namespace ComputerGander
                 ).FirstOrDefault();
 
                 // Update the button and text labels
-
                 macLabel.Text = $"MAC: {macAddr}";
                 macButton.Text = "Hide MAC Address";
             }
 
             // Hide the MAC address
-
             else
             {
                 macLabel.Text = "MAC Address Hidden";
@@ -46,7 +43,6 @@ namespace ComputerGander
         private void GenerateIP(object sender, EventArgs e)
         {
             // Find and display the IP Address of the host machine.
-
             if(ipButton.Text == "Show IP Address")
             {
                 string hostName = Dns.GetHostName();
@@ -61,7 +57,6 @@ namespace ComputerGander
                 ipButton.Text = "Show IP Address";
                 ipAddressLabel.Text = "IP address hidden";
             }
-            
         }
 
         
@@ -75,6 +70,7 @@ namespace ComputerGander
         {
             try
             {
+                // Initialize variables to send pings
                 string[] args = { ipTextBox.Text };
                 Ping pingSender = new Ping();
                 PingOptions options = new PingOptions();
@@ -88,6 +84,8 @@ namespace ComputerGander
                 byte[] buffer = Encoding.ASCII.GetBytes(data);
                 int timeout = 120;
                 PingReply reply = pingSender.Send(args[0], timeout, buffer, options);
+
+                // Update label to show information.
                 if (reply.Status == IPStatus.Success)
                 {
                     pingDataLabel.Text = $"Address: {reply.Address.ToString()}\n" +
@@ -96,6 +94,8 @@ namespace ComputerGander
                         $"Buffer size: {reply.Buffer.Length}";
                 }
             }
+
+            // Catch invalid inputs
             catch (PingException)
             {
                 pingDataLabel.Text = "Not a valid IP";
@@ -116,8 +116,12 @@ namespace ComputerGander
             IPGlobalProperties properties = IPGlobalProperties.GetIPGlobalProperties();
             IPGlobalStatistics ipstats = properties.GetIPv6GlobalStatistics();
 
+            // Packet counts to find the amount of packets
+            // recieved since the last packet polling
             Program.packetCount2 = ipstats.ReceivedPackets;
             packetsListBox.Items.Add(Program.packetCount2 - Program.packetCount1);
+
+            // Update the old packet count to the newer one.
             Program.packetCount1 = Program.packetCount2;
         }
     }

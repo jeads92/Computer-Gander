@@ -5,7 +5,7 @@ Mac Address
 IPv6 Address
 and packets being received over a 2 second interval.
 
-Also allows to ping an address to receive some information:
+Also allows user to ping an address to receive some information:
 RoundTrip time,
 time to live (ttl),
 and buffer size.
