@@ -46,7 +46,7 @@
             // ipAddressLabel
             // 
             this.ipAddressLabel.AutoSize = true;
-            this.ipAddressLabel.Location = new System.Drawing.Point(64, 122);
+            this.ipAddressLabel.Location = new System.Drawing.Point(6, 122);
             this.ipAddressLabel.Name = "ipAddressLabel";
             this.ipAddressLabel.Size = new System.Drawing.Size(20, 15);
             this.ipAddressLabel.TabIndex = 0;
@@ -75,7 +75,7 @@
             // macLabel
             // 
             this.macLabel.AutoSize = true;
-            this.macLabel.Location = new System.Drawing.Point(64, 53);
+            this.macLabel.Location = new System.Drawing.Point(6, 53);
             this.macLabel.Name = "macLabel";
             this.macLabel.Size = new System.Drawing.Size(37, 15);
             this.macLabel.TabIndex = 3;
@@ -128,15 +128,15 @@
             // 
             this.packetsListBox.FormattingEnabled = true;
             this.packetsListBox.ItemHeight = 15;
-            this.packetsListBox.Location = new System.Drawing.Point(240, 27);
+            this.packetsListBox.Location = new System.Drawing.Point(285, 27);
             this.packetsListBox.Name = "packetsListBox";
-            this.packetsListBox.Size = new System.Drawing.Size(333, 334);
+            this.packetsListBox.Size = new System.Drawing.Size(212, 334);
             this.packetsListBox.TabIndex = 11;
             // 
             // PacketsLabel
             // 
             this.PacketsLabel.AutoSize = true;
-            this.PacketsLabel.Location = new System.Drawing.Point(355, 9);
+            this.PacketsLabel.Location = new System.Drawing.Point(345, 9);
             this.PacketsLabel.Name = "PacketsLabel";
             this.PacketsLabel.Size = new System.Drawing.Size(97, 15);
             this.PacketsLabel.TabIndex = 12;
@@ -153,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(793, 450);
+            this.ClientSize = new System.Drawing.Size(518, 450);
             this.Controls.Add(this.PacketsLabel);
             this.Controls.Add(this.packetsListBox);
             this.Controls.Add(this.label1);
