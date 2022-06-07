@@ -12,8 +12,6 @@ namespace ComputerGander
         public static long packetCount1 = 0;
         public static long packetCount2 = 0;
 
-
-
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
