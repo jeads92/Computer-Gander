@@ -112,34 +112,14 @@ namespace ComputerGander
 
         private void primaryTimer_Tick(object sender, EventArgs e)
         {
-            // Initialize variable to get IP Properties
+            // Initialize packet variables
             NetworkInterfaceComponent version = NetworkInterfaceComponent.IPv6;
             IPGlobalProperties properties = IPGlobalProperties.GetIPGlobalProperties();
             IPGlobalStatistics ipstats = properties.GetIPv6GlobalStatistics();
 
-            // Initialize packet variables;
-            long totalPacketsNew;
-            long previousCount;
-            int listBoxSize = packetsListBox.Items.Count;
-
-            // First poll of packets will be from the ipstatistics.
-
-            if(packetsListBox.Items.Count == 0)
-            {
-                previousCount = 0;
-            }
-            else
-            {
-                // old packets amount will be the last item in the listbox.
-
-                previousCount = (long) packetsListBox.Items[listBoxSize - 1];
-            }
-
-            // Get the number of packets added since the last poll
-
-            totalPacketsNew = ipstats.ReceivedPackets - previousCount; // This isn't correct
-
-            packetsListBox.Items.Add(totalPacketsNew);
+            Program.packetCount2 = ipstats.ReceivedPackets;
+            packetsListBox.Items.Add(Program.packetCount2 - Program.packetCount1);
+            Program.packetCount1 = Program.packetCount2;
         }
     }
 }

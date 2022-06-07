@@ -145,7 +145,7 @@
             // primaryTimer
             // 
             this.primaryTimer.Enabled = true;
-            this.primaryTimer.Interval = 2500;
+            this.primaryTimer.Interval = 5001;
             this.primaryTimer.Tick += new System.EventHandler(this.primaryTimer_Tick);
             // 
             // Form1
